@@ -2,6 +2,7 @@ const BASE_URL = import.meta.env.VITE_SERVER_URL || "http://localhost:3000";
 
 export async function playerLogin(username: string, password: string) {
   console.log('No Player Fetch, login with:', { username, password });
+  console.log('Fetch link: ', BASE_URL);
   const res = await fetch(`${BASE_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
